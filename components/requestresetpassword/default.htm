@@ -1,0 +1,44 @@
+<div id="loginForm" class="p-4 shadow-sm">
+    <h3 class="mt-0 mb-3">Reset Password</h3>
+    <form data-request="RequestResetPassword::onSubmit" data-request-flash>
+        <div class="row">
+            <div class="col-12 mb-3">
+                <label for="inputEmail" class="mb-2">Email</label>
+                <input class="form-control" name="email" type="email" id="inputEmail">
+            </div>
+            <div class="col-12 mb-1 d-grid">
+                <button class="btn btn-md btn-block btn-primary" data-attach-loading>Send Reset Email</button>
+                <span class="d-block text-center mt-2"><a href="{{RequestResetPassword.loginUrl}}" class="text-primary small text-decoration-none">Return to login</a></span>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% put styles %}
+    <style type="text/css">
+        #loginForm {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            max-width: 400px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        #loginForm label {
+            font-weight: 600;
+        }
+        #loginForm .form-control,
+        #loginForm .btn {
+            border-radius: 4px;
+        }
+        #loginForm .btn {
+            font-weight: 600;
+        }
+        #loginForm .form-control:focus,
+        #loginForm .form-control:active {
+            box-shadow: none;
+        }
+        #loginForm .text-primary {
+            color: #325e89 !important;
+        }
+    </style>
+{% endput %}

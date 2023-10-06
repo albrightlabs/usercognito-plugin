@@ -1,0 +1,7 @@
+v1.0.1: First version of User Cognito
+v1.0.2:
+    - Update backend users table for is_congnito_user
+    - update_backend_users_table.php
+v1.0.3:
+    - Update backend users table for is_congnito_user_existing
+    - update_backend_users_table_2.php

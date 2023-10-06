@@ -1,0 +1,58 @@
+<div id="loginForm" class="p-4 shadow-sm">
+    <h3 class="mt-0 mb-3">Reset Password</h3>
+    <p class="text-muted"><span class="d-inline-block" style="position:relative; top: 4px; font-size:180%; line-height:19px;">&#9432;</span>&nbsp; Check your email for a confirmation code.</p>
+    <form data-request="ResetPassword::onSubmit" data-request-flash>
+        <div class="row">
+            <div class="col-12 mb-3">
+                <label for="inputEmail" class="mb-2">Email</label>
+                <input class="form-control" name="email" type="email" id="inputEmail" value="{{ResetPassword.email}}">
+            </div>
+            <div class="col-12 mb-3">
+                <label for="inputConfirmationCode" class="mb-2">Confirmation Code</label>
+                <input class="form-control" name="confirmation_code" type="text" id="inputConfirmationCode">
+            </div>
+            <div class="col-12 mb-3">
+                <label for="inputPassword" class="mb-2">Password</label>
+                <input class="form-control" name="password" type="password" id="inputPassword">
+            </div>
+            <div class="col-12 mb-3">
+                <label for="inputPasswordConfirmation" class="mb-2">Password Confirmation</label>
+                <input class="form-control" name="password_confirmation" type="password" id="inputPasswordConfirmation">
+            </div>
+            <div class="col-12 mb-1 d-grid">
+                <button class="btn btn-md btn-block btn-primary" data-attach-loading>Reset Password</button>
+                <span class="d-block text-center mt-2"><a href="{{ResetPassword.requestNewPasswordUrl}}" class="text-primary small text-decoration-none">Return to previous page</a></span>
+                <span class="d-block text-center mt-2"><a href="{{ResetPassword.loginUrl}}" class="text-primary small text-decoration-none">Return to login</a></span>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% put styles %}
+    <style type="text/css">
+        #loginForm {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            max-width: 400px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        #loginForm label {
+            font-weight: 600;
+        }
+        #loginForm .form-control,
+        #loginForm .btn {
+            border-radius: 4px;
+        }
+        #loginForm .btn {
+            font-weight: 600;
+        }
+        #loginForm .form-control:focus,
+        #loginForm .form-control:active {
+            box-shadow: none;
+        }
+        #loginForm .text-primary {
+            color: #325e89 !important;
+        }
+    </style>
+{% endput %}

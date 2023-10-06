@@ -1,0 +1,13 @@
+{
+    "name": "albrightlabs/usercognito-plugin",
+    "type": "october-plugin",
+    "description": "Extends the October CMS core Backend User for AWS Cognito support.",
+    "require": {
+        "october/rain": ">=3.0",
+        "composer/installers": "~1.0",
+        "black-bits/laravel-cognito-auth": "0.1.16",
+        "aws/aws-sdk-php": "^3.273",
+        "illuminate/auth": "*",
+        "laravel/ui": "^4.2"
+    }
+}
